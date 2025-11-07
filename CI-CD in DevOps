@@ -1,0 +1,393 @@
+CI/CD in DevOps – Introduction & Practical Understanding
+🔹 What is CI/CD?
+
+CI/CD stands for:
+
+Continuous Integration
+Continuous Delivery
+
+
+These are core concepts in DevOps aimed at improving software development and deployment processes.
+
+🔹 Why CI/CD is Important?
+
+Helps manage frequent changes in applications.
+Supports collaboration among multiple developers working on the same project.
+Ensures smooth integration, testing, and deployment of new features or bug fixes.
+
+🔹 Practical Example: E-Commerce Application
+
+Imagine working in a company with many developers building a scalable e-commerce app.
+The app evolves over time, not built all at once.
+Changes include:
+
+Bug fixes
+New feature implementations
+
+
+The process for each change:
+
+Write code for the new feature.
+Merge it with the existing codebase.
+Test the integrated code.
+Deploy the updated application.
+
+CI/CD in DevOps – Software Development Lifecycle & CI/CD Involvement
+🔹 Software Development Lifecycle (SDLC)
+
+Every change in an application goes through the SDLC, which includes several key stages where CI/CD plays a role.
+
+🔹 Typical Workflow in SDLC with CI/CD
+
+
+Feature Development
+
+Developers write code for new features or changes.
+
+
+
+Commit & Push
+
+Code is committed and pushed to the developer’s own branch.
+Organizations usually maintain a main branch (e.g., main or master).
+Developers work on individual branches and later merge their changes into the main branch.
+
+
+
+Version Control System
+
+This process is managed using tools like Git.
+Multiple developers integrate their changes into the main branch over time.
+
+
+
+Build Stage
+
+After pushing changes, the next step is to build the application.
+This involves creating deployable artifacts from the source code.
+These artifacts include:
+
+Source code
+Dependencies
+Libraries
+
+
+The result is a build file, which contains:
+
+Binary files
+Other necessary components for deployment
+
+CI/CD in DevOps – Build, Test, Release & Deployment Process
+🔹 Build Artifacts
+
+After building the application, we get executable files.
+Example: In Android development, the final output is an APK file (.apk).
+
+🔹 Testing Stage
+Includes multiple layers of testing:
+
+
+Unit Testing
+
+Performed by developers.
+Tests individual components or functions.
+
+
+
+Integration Testing
+
+Ensures different components work well together.
+
+
+
+Regression Testing
+
+Verifies that new changes haven’t broken existing functionality.
+
+
+
+🔹 Release Stage
+
+Once testing is complete, the application moves to the release phase.
+Release means making the application available to end users.
+
+🔹 Deployment Stage
+
+
+Deployment involves making the software/code available in a specific environment.
+
+
+Most organizations use multiple deployment environments:
+
+Dev (Development) – for developers only.
+Staging – a pre-production environment used for demos or internal approvals.
+Prod (Production) – live environment for end users.
+
+
+
+Example use of staging:
+
+Application is deployed to staging for a demo to a manager or CTO.
+Once approved, it can be moved to production.
+
+CI/CD in DevOps – Continuous Delivery vs Deployment & Need for Automation
+🔹 Continuous Delivery vs Continuous Deployment
+
+After automatic deployment to staging, some organizations:
+
+Require manual approval before deploying to production.
+Others allow automatic deployment to production without manual steps.
+
+
+So, CD can mean:
+
+Continuous Delivery – manual approval before production.
+Continuous Deployment – fully automated deployment to production.
+
+
+The choice depends on the organization’s implementation strategy.
+
+🔹 Summary of CI/CD
+
+CI/CD is an automation pipeline triggered with every code change.
+After Continuous Integration, the process moves into Continuous Delivery/Deployment.
+CI/CD automates all steps from code commit to deployment.
+
+
+📘 Why Do We Need CI/CD Automation?
+🔹 Problems with Manual Processes
+
+
+Multiple Developers Working Together
+
+Everyone commits changes to their own branches.
+Eventually, all changes need to be merged into the main branch.
+This can lead to merge conflicts and integration issues.
+
+
+
+Integration Hell
+
+Manual merging and resolving conflicts is time-consuming and error-prone.
+Developers may miss bugs or errors during manual integration.
+
+
+
+Manual Testing Challenges
+
+After integration, codebase often needs to be frozen for testing.
+Manual testing is:
+
+Slow
+Prone to errors
+
+
+Example: Hundreds of unit tests may be needed for a single feature.
+If testing is manual, bugs may go undetected until users encounter them in production.
+
+CI/CD in DevOps – Challenges Without CI/CD & How CI/CD Solves Them
+🔹 Manual Process Challenges
+
+
+Infrequent Releases
+
+Manual testing and deployment take time.
+Leads to delayed releases for users.
+
+
+
+Rollback Issues
+
+If an error occurs during production deployment:
+
+Manual rollback is slow and complex.
+Application may remain down or buggy until backup is restored.
+
+
+
+
+
+Weekend Deployment Risks
+
+Before CI/CD, deployments were avoided on Fridays or weekends.
+If something broke, no developers were available to fix it.
+
+
+
+🔹 CI/CD Benefits
+
+Automation eliminates manual errors and delays.
+Brings reliability and speed to the entire process.
+Every code commit triggers:
+
+Automated build
+Automated testing
+
+
+Developers get instant feedback on whether their code passes all tests.
+If tests fail:
+
+Developer can identify the issue.
+Fix and recommit the code.
+
+
+
+🔹 Continuous Integration Significance
+
+Ensures that every commit is tested and verified.
+Reduces chances of integration conflicts.
+Code is always in a deployable state.
+
+🔹 Continuous Delivery Significance
+
+Enables multiple deployments per day.
+Even 5 new features can be deployed to production in a single day.
+
+
+📘 Implementing CI/CD Pipelines
+🔹 Automation Scripts
+
+CI/CD pipelines are implemented using automation scripts.
+Example: GitHub Actions
+
+Uses .yaml files (Yet Another Markup Language).
+Contains instructions for:
+
+Building code
+Running tests
+Deploying applications
+
+
+
+
+
+🔹 Workflow Execution
+
+When a developer pushes code:
+
+A workflow starts automatically.
+Each step in the script runs sequentially.
+If all tests pass → ✅ Green tick (success).
+If any test fails → Developer can inspect and fix the issue.
+
+
+
+🔹 Popular CI/CD Tools
+
+GitHub Actions
+Jenkins
+CircleCI
+Travis CI
+GitLab CI/CD
+Bamboo
+Many other tools are available in the industry.
+
+CI/CD in DevOps – Tool Recommendations & Deployment Strategies
+🔹 Which CI/CD Tool Should You Learn?
+
+Depends heavily on the organization you work in.
+Most companies use tools that are already integrated into their workflow.
+
+🔹 Two Most Popular CI/CD Tools:
+
+
+GitHub Actions
+
+Released in 2019
+Native to GitHub
+Easy to set up if your codebase is already on GitHub
+Recommended for beginners due to its intuitive setup
+
+
+
+Jenkins
+
+Released in 2011
+A powerful job orchestrator
+Highly customizable
+Used widely before GitHub Actions became popular
+Slightly harder to maintain
+
+
+
+
+✅ Recommendation: Start with GitHub Actions if you're setting up CI/CD for the first time.
+
+
+📘 Continuous Delivery vs Continuous Deployment
+🔹 Continuous Delivery (CD)
+
+After build and test, code is deployed to staging.
+End-to-end tests (compliance, performance, security) are run.
+Requires manual approval before deploying to production.
+Suitable for sensitive applications (e.g., banking, fintech).
+
+🔹 Continuous Deployment
+
+Same process as CD, but no manual approval.
+If all tests pass, code is automatically deployed to production.
+Suitable for non-sensitive apps (e.g., Netflix, Hotstar).
+
+
+📘 Deployment Strategies to Minimize Downtime
+🔹 Blue-Green Deployment
+
+Two identical environments:
+
+Blue: current version
+Green: new version
+
+
+Traffic is switched from blue to green.
+If issues arise, traffic can be redirected back to blue.
+
+🔹 Canary Deployment
+
+Gradual rollout:
+
+Only a small portion of users are directed to the new version initially.
+If stable, more traffic is shifted gradually.
+
+
+
+
+ Final Summary
+CI/CD helps:
+
+Automate build, test, and deployment
+Reduce errors and manual effort
+Enable faster and safer releases
+Support rollback and zero-downtime strategies
+
+Canary Deployment:
+
+Initially, only 5–10% of users are redirected to the new version for a few hours (1–3 hours).
+If everything works fine, gradually increase the percentage of users.
+Eventually, all users move to the new version.
+If any issue occurs, traffic can be redirected back to the old version.
+
+
+
+Rolling Deployment:
+
+Maintains a single environment with multiple server instances.
+A load balancer distributes requests across these instances.
+New version is deployed on a few instances first (could be one or a group).
+Old version remains on other instances.
+If stable, gradually deploy the new version to all instances.
+
+
+
+CI/CD with Large Applications:
+
+CI/CD simplifies work for scalable applications and large teams.
+Integration with Docker and Kubernetes makes deployment easier and more efficient in large organizations.
+
+
+
+Key Takeaways:
+
+CI/CD automates build, test, and deployment.
+Helps avoid downtime and ensures smooth updates.
+Deployment strategies like Blue-Green, Canary, and Rolling improve reliability.
+Tools like Docker and Kubernetes enhance CI/CD workflows.
