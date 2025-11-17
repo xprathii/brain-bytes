@@ -1,0 +1,178 @@
+What is an API?
+API stands for Application Programming Interface.
+It’s a set of rules and protocols that allow two software systems to communicate with each other.
+Think of it as a waiter in a restaurant:
+
+You (the client) tell the waiter what you want (request).
+The waiter takes your order to the kitchen (server).
+The kitchen prepares the food and gives it to the waiter.
+The waiter brings it back to you (response).
+
+You don’t need to know how the kitchen works—just the menu (API documentation).
+
+Why do we need APIs?
+
+To connect different systems (e.g., your app and a payment gateway).
+To reuse services without reinventing the wheel.
+To enable automation and integration between apps.
+
+
+How does an API work?
+
+Client sends a request to the API endpoint (a URL).
+API processes the request and interacts with the server/database.
+Server sends back a response (usually in JSON or XML format).
+Client uses the response to display or perform an action.
+
+Example:
+When you check the weather on your phone:
+
+Your app calls a Weather API with your location.
+The API fetches data from the weather server.
+It returns temperature, humidity, etc., to your app.
+
+
+Types of APIs
+
+REST API: Uses HTTP methods (GET, POST, PUT, DELETE). Most common.
+SOAP API: XML-based, strict and secure (used in banking).
+GraphQL: Lets you fetch exactly the data you need.
+gRPC: High-performance, binary protocol for microservices.
+WebHooks: Push notifications when events happen.
+WebSockets: Real-time two-way communication.
+WebRTC: Peer-to-peer media streaming (video calls).
+
+
+Key Components
+
+Endpoint: URL where API is accessed.
+Request: Data sent by the client.
+Response: Data returned by the server.
+Methods: Actions like GET (read), POST (create), PUT (update), DELETE (remove).
+Authentication: Secures API (e.g., API keys, OAuth).
+
+
+Real-Life Analogy
+
+API = Waiter
+Client = Customer
+Server = Kitchen
+Menu = API Documentation
+Order = Request
+Food = Response
+
+
+Interview-Ready Points
+
+Define API simply: “An API is a way for two software systems to talk to each other using predefined rules.”
+Explain why it’s important: “It enables integration, automation, and scalability.”
+Mention how it works: “Client sends a request → API processes → Server responds.”
+Give a real-world example: “Checking weather on your phone uses a Weather API.”
+Know types and when to use them.
+
+Basic API Questions
+1. What is an API?
+An API (Application Programming Interface) is a set of rules that allows two software systems to communicate. It defines how requests and responses are exchanged.
+2. How does an API work?
+Client sends a request → API processes it → Server responds with data (usually JSON or XML).
+3. What are the main components of an API?
+
+Endpoint: URL to access API
+Request: Data sent by client
+Response: Data returned by server
+Methods: Actions like GET, POST, PUT, DELETE
+
+4. Difference between API and Web Service?
+All web services are APIs, but not all APIs are web services. Web services use network protocols (HTTP, SOAP), while APIs can be local or remote.
+5. Why do we use APIs?
+To integrate systems, reuse functionality, and enable automation.
+
+REST API Questions
+6. What is REST?
+REST (Representational State Transfer) is an architectural style using HTTP methods for communication.
+7. REST vs SOAP?
+
+REST: Lightweight, JSON, faster, widely used.
+SOAP: XML, strict, secure, used in banking/government.
+
+8. HTTP Methods in REST?
+
+GET: Read data
+POST: Create data
+PUT: Update data
+DELETE: Remove data
+
+9. What is statelessness in REST?
+Each request is independent; server does not store client state.
+10. What is an endpoint?
+A specific URL where an API resource can be accessed.
+
+Advanced REST Concepts
+11. What is idempotency?
+An operation that produces the same result no matter how many times it’s repeated (e.g., GET, PUT).
+12. PUT vs PATCH?
+
+PUT: Updates entire resource
+PATCH: Updates partial resource
+
+13. How do you handle versioning?
+Using URL (e.g., /v1/users) or headers.
+14. What is HATEOAS?
+Hypermedia as the Engine of Application State – API responses include links for navigation.
+15. How do you secure REST APIs?
+OAuth, JWT tokens, API keys, HTTPS.
+
+GraphQL & gRPC
+16. What is GraphQL?
+A query language for APIs that lets clients request exactly the data they need.
+17. Advantages of GraphQL?
+No over-fetching, single endpoint, flexible queries.
+18. What is gRPC?
+Google Remote Procedure Call – high-performance API using Protocol Buffers.
+19. When use gRPC over REST?
+For microservices and real-time streaming where speed matters.
+20. What are Protocol Buffers?
+Binary serialization format used by gRPC for efficiency.
+
+WebHooks & Real-Time APIs
+21. What is a WebHook?
+A “reverse API” that sends data to your app when an event occurs.
+22. WebSocket vs HTTP?
+WebSocket keeps a persistent two-way connection; HTTP is request-response only.
+23. What is WebRTC?
+Peer-to-peer protocol for real-time audio/video communication.
+24. How to implement real-time communication?
+Using WebSockets or WebRTC.
+25. Example of WebHook?
+Payment gateway sending “payment successful” notification.
+
+Error Handling & Best Practices
+26. How do you handle errors in REST APIs?
+Use proper HTTP status codes and error messages.
+27. Common HTTP status codes?
+
+200 OK
+201 Created
+400 Bad Request
+401 Unauthorized
+404 Not Found
+500 Internal Server Error
+
+28. How to design scalable APIs?
+Use caching, pagination, load balancing, and versioning.
+29. What is rate limiting?
+Restricting number of requests per user to prevent abuse.
+30. How do you document APIs?
+Using tools like Swagger/OpenAPI.
+
+Practical/Scenario-Based
+31. API is slow – what do you do?
+Check network latency, optimize queries, enable caching, use CDN.
+32. How to handle pagination?
+Use limit and offset or cursor-based pagination.
+33. Authentication vs Authorization?
+Authentication = Who you are; Authorization = What you can access.
+34. How do you test APIs?
+Tools like Postman, Swagger, or automated tests.
+35. How do you monitor API performance?
+Using tools like New Relic, Datadog, or API Gateway metrics.
