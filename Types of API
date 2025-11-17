@@ -1,0 +1,158 @@
+ 1.REST API (Representational State Transfer)
+
+What it is: A lightweight, stateless way for apps to communicate over HTTP using URLs.
+How it works: You send a request (GET, POST, PUT, DELETE) to a URL, and you get back data in JSON or XML.
+Strengths:
+
+Simple and widely used
+Works over standard web protocols
+Easy to integrate
+
+
+Weaknesses:
+
+Can over-fetch or under-fetch data
+Not ideal for real-time updates
+
+
+Real-life example:
+Ordering food online. When you click “Add to Cart,” your app sends a REST API request to the server to update your order. When you check your cart, another REST API call fetches the updated list.
+
+
+ 2. SOAP API (Simple Object Access Protocol)
+
+What it is: A strict, XML-based protocol for exchanging structured data.
+How it works: Uses XML messages with a rigid format and often includes security standards.
+Strengths:
+
+Very secure and reliable
+Built-in error handling
+Good for enterprise systems
+
+
+Weaknesses:
+
+Verbose and slower than REST
+Harder to implement
+
+
+Real-life example:
+Bank transactions. When you transfer money, SOAP ensures the message is secure, validated, and logged properly—banks trust SOAP because of its strict standards.
+
+
+ 3. gRPC (Google Remote Procedure Call)
+
+What it is: A high-performance API using Protocol Buffers instead of JSON.
+How it works: Client calls a function on the server as if it were local, using binary data for speed.
+Strengths:
+
+Extremely fast
+Great for microservices
+Supports streaming
+
+
+Weaknesses:
+
+Harder to debug
+Requires special tools
+
+
+Real-life example:
+Uber ride updates. When you book a ride, gRPC can quickly send location updates between your app and Uber’s servers in real time.
+
+
+ 4. GraphQL
+
+What it is: A query language for APIs that lets clients ask for exactly the data they need.
+How it works: Instead of multiple REST calls, you send one query specifying fields you want.
+Strengths:
+
+No over-fetching or under-fetching
+Flexible and efficient
+
+
+Weaknesses:
+
+More complex to set up
+Can be slower for simple requests
+
+
+Real-life example:
+Instagram feed. Your app asks for posts, comments, and likes in one GraphQL query instead of multiple REST calls.
+
+
+ 5. WebHooks
+
+What it is: A “reverse API” that pushes data to your app when an event happens.
+How it works: You register a URL, and the server sends data to it when triggered.
+Strengths:
+
+Real-time notifications
+Simple to implement
+
+
+Weaknesses:
+
+Hard to manage failures
+Security concerns if not validated
+
+
+Real-life example:
+Payment confirmation. After you pay online, the payment gateway sends a WebHook to the store’s system saying “Payment successful.”
+
+
+ 6. WebSockets
+
+What it is: A protocol for persistent, two-way communication between client and server.
+How it works: Unlike HTTP, the connection stays open for continuous data exchange.
+Strengths:
+
+Perfect for real-time apps
+Low latency
+
+
+Weaknesses:
+
+More complex than REST
+Needs extra infrastructure
+
+
+Real-life example:
+WhatsApp chat. Messages appear instantly because WebSockets keep the connection open for real-time communication.
+
+
+ 7. WebRTC
+
+What it is: A protocol for peer-to-peer real-time communication (audio, video, data).
+How it works: Browsers connect directly without a central server for media streaming.
+Strengths:
+
+Low latency
+Great for video calls and screen sharing
+
+
+Weaknesses:
+
+Complex setup
+NAT/firewall issues
+
+
+Real-life example:
+Google Meet video call. Your browser uses WebRTC to stream video and audio directly to other participants.
+
+
+-> Interview Tips
+
+Be ready to explain when to use each API:
+
+REST → General apps, CRUD operations
+SOAP → Banking, healthcare, government
+gRPC → High-performance microservices
+GraphQL → Apps needing flexible data fetching
+WebHooks → Event-driven notifications
+WebSockets → Real-time chat, gaming
+WebRTC → Video/audio calls
+
+
+Mention trade-offs (speed vs simplicity, flexibility vs complexity).
+Use real-world examples to make your answer relatable.
